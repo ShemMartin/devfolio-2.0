@@ -57,53 +57,79 @@ export default function ModernPortfolio() {
   const projects = [
     {
       title: "Real-Time Task Manager",
-      description: "Collaborative project management tool with real-time updates, drag-and-drop functionality, and team collaboration features.",
+      description: "Collaborative project management tool with real-time updates, drag-and-drop functionality, and team collaboration features. Built for teams who need seamless coordination.",
       tech: ["React", "Node.js", "WebSocket", "MongoDB"],
       features: ["Real-time sync", "Drag & drop", "User authentication", "Team workspaces"],
       github: "#",
       live: "#",
       difficulty: "Advanced",
-      gradient: "from-purple-500 to-pink-500"
+      gradient: "from-purple-500 to-pink-500",
+      category: "Web App"
     },
     {
       title: "E-Commerce Dashboard",
-      description: "Full-featured admin dashboard for managing products, orders, and analytics with interactive charts and inventory management.",
+      description: "Full-featured admin dashboard for managing products, orders, and analytics with interactive charts and inventory management. Complete business solution.",
       tech: ["React", "Express", "PostgreSQL", "Chart.js"],
       features: ["Analytics", "CRUD operations", "Search & filters", "Order tracking"],
       github: "#",
       live: "#",
-      difficulty: "Intermediate",
-      gradient: "from-blue-500 to-cyan-500"
-    },
-    {
-      title: "Weather & Travel Planner",
-      description: "Integrated app combining real-time weather data with travel planning features, using multiple APIs for comprehensive trip preparation.",
-      tech: ["React", "REST APIs", "Tailwind CSS"],
-      features: ["API integration", "Responsive design", "Data visualization", "Location search"],
-      github: "#",
-      live: "#",
-      difficulty: "Intermediate",
-      gradient: "from-green-500 to-emerald-500"
+      difficulty: "Advanced",
+      gradient: "from-blue-500 to-cyan-500",
+      category: "Web App"
     },
     {
       title: "DevOps Monitoring Dashboard",
-      description: "System monitoring tool displaying server metrics, uptime statistics, and automated alerts. Perfect showcase of IT background.",
+      description: "System monitoring tool displaying server metrics, uptime statistics, and automated alerts. Real-time infrastructure monitoring for DevOps teams.",
       tech: ["React", "Node.js", "Docker", "Redis"],
       features: ["Live metrics", "Alert system", "Multi-server support", "Historical data"],
       github: "#",
       live: "#",
       difficulty: "Advanced",
-      gradient: "from-orange-500 to-red-500"
+      gradient: "from-orange-500 to-red-500",
+      category: "Web App"
+    },
+    {
+      title: "Savory Bites Restaurant",
+      description: "Modern restaurant landing page with elegant menu showcase, online reservations, and seamless ordering system. Designed to increase customer engagement and bookings.",
+      tech: ["React", "Tailwind CSS", "Framer Motion", "EmailJS"],
+      features: ["Menu gallery", "Reservation system", "Mobile-first design", "Contact form"],
+      github: "#",
+      live: "#",
+      difficulty: "Intermediate",
+      gradient: "from-red-500 to-orange-500",
+      category: "Landing Page"
+    },
+    {
+      title: "CloudFlow - SaaS Platform",
+      description: "Sleek SaaS product landing page for project management software. Features pricing tables, feature comparisons, and demo booking. Conversion-optimized design.",
+      tech: ["React", "Tailwind CSS", "AOS Animations"],
+      features: ["Pricing table", "Feature showcase", "Demo request", "Testimonials"],
+      github: "#",
+      live: "#",
+      difficulty: "Intermediate",
+      gradient: "from-blue-600 to-purple-600",
+      category: "Landing Page"
+    },
+    {
+      title: "PixelForge Creative Studio",
+      description: "Bold creative agency landing page with striking portfolio grid and team showcase. Dark theme with neon accents designed to capture attention and convert visitors.",
+      tech: ["React", "Tailwind CSS", "GSAP"],
+      features: ["Portfolio grid", "Team section", "Case studies", "Contact form"],
+      github: "#",
+      live: "#",
+      difficulty: "Intermediate",
+      gradient: "from-pink-500 to-violet-500",
+      category: "Landing Page"
     }
   ];
 
   const skills = [
     { name: "React", level: 85 },
     { name: "JavaScript", level: 90 },
+    { name: "HTML/CSS", level: 95 },
+    { name: "PHP", level: 80 },
     { name: "Node.js", level: 75 },
-    { name: "Express", level: 70 },
-    { name: "MongoDB", level: 80 },
-    { name: "PostgreSQL", level: 75 },
+    { name: "MySQL", level: 85 },
   ];
 
   const testimonials = [
@@ -145,10 +171,10 @@ export default function ModernPortfolio() {
       <div className="h-screen flex items-center justify-center bg-slate-900 relative overflow-hidden">
         {/* Animated background */}
         <div className="absolute inset-0 opacity-20">
-          <div className="absolute top-20 left-10 text-6xl animate-bounce">💻</div>
-          <div className="absolute top-40 right-20 text-6xl animate-bounce" style={{ animationDelay: '0.3s' }}>⚛️</div>
-          <div className="absolute bottom-20 left-20 text-6xl animate-bounce" style={{ animationDelay: '0.6s' }}>🚀</div>
-          <div className="absolute bottom-40 right-10 text-6xl animate-bounce" style={{ animationDelay: '0.9s' }}>🎨</div>
+          <div className="absolute top-20 left-10 text-4xl animate-bounce">💻</div>
+          <div className="absolute top-40 right-20 text-4xl animate-bounce" style={{ animationDelay: '0.3s' }}>⚛️</div>
+          <div className="absolute bottom-20 left-20 text-4xl animate-bounce" style={{ animationDelay: '0.6s' }}>🚀</div>
+          <div className="absolute bottom-40 right-10 text-4xl animate-bounce" style={{ animationDelay: '0.9s' }}>🎨</div>
         </div>
         
         <div className="text-center relative z-10">
@@ -178,7 +204,7 @@ export default function ModernPortfolio() {
                 <Code className="text-cyan-400 animate-pulse" size={28} />
               </div>
               <span className="text-xl font-bold bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
-                Your Name
+                Shem Martin
               </span>
             </div>
             
@@ -243,12 +269,12 @@ export default function ModernPortfolio() {
         
         {/* Floating tech icons */}
         <div className="absolute inset-0 opacity-10">
-          <div className="absolute top-20 left-10 text-6xl animate-bounce" style={{ animationDuration: '3s' }}>💻</div>
-          <div className="absolute top-40 right-20 text-6xl animate-bounce" style={{ animationDuration: '4s', animationDelay: '0.5s' }}>⚛️</div>
-          <div className="absolute bottom-20 left-20 text-6xl animate-bounce" style={{ animationDuration: '3.5s', animationDelay: '1s' }}>🚀</div>
-          <div className="absolute bottom-40 right-10 text-6xl animate-bounce" style={{ animationDuration: '4.5s', animationDelay: '1.5s' }}>🎨</div>
-          <div className="absolute top-1/2 left-1/4 text-5xl animate-pulse">🔧</div>
-          <div className="absolute top-1/3 right-1/4 text-5xl animate-pulse" style={{ animationDelay: '1s' }}>⚡</div>
+          <div className="absolute top-20 left-10 text-4xl animate-bounce" style={{ animationDuration: '3s' }}>💻</div>
+          <div className="absolute top-40 right-20 text-4xl animate-bounce" style={{ animationDuration: '4s', animationDelay: '0.5s' }}>⚛️</div>
+          <div className="absolute bottom-20 left-20 text-4xl animate-bounce" style={{ animationDuration: '3.5s', animationDelay: '1s' }}>🚀</div>
+          <div className="absolute bottom-40 right-10 text-4xl animate-bounce" style={{ animationDuration: '4.5s', animationDelay: '1.5s' }}>🎨</div>
+          <div className="absolute top-1/2 left-1/4 text-3xl animate-pulse">🔧</div>
+          <div className="absolute top-1/3 right-1/4 text-3xl animate-pulse" style={{ animationDelay: '1s' }}>⚡</div>
         </div>
 
         {/* Grid pattern overlay */}
@@ -272,7 +298,7 @@ export default function ModernPortfolio() {
             {/* Main heading with typing effect simulation */}
             <h1 className="text-5xl md:text-7xl font-bold mb-6">
               <span className="bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-500 bg-clip-text text-transparent inline-block animate-pulse">
-                Full-Stack Developer
+                Frontend & Full-Stack Developer
               </span>
             </h1>
 
@@ -320,13 +346,13 @@ export default function ModernPortfolio() {
             </div>
 
             <div className="flex gap-6 justify-center mt-8">
-              <a href="#" className={`${isDarkMode ? 'text-slate-300' : 'text-gray-600'} hover:text-cyan-400 transition-all transform hover:scale-125 hover:-translate-y-1`}>
+              <a href="https://github.com/ShemMartin" target="_blank" rel="noopener noreferrer" className={`${isDarkMode ? 'text-slate-300' : 'text-gray-600'} hover:text-cyan-400 transition-all transform hover:scale-125 hover:-translate-y-1`}>
                 <Github size={28} />
               </a>
-              <a href="#" className={`${isDarkMode ? 'text-slate-300' : 'text-gray-600'} hover:text-cyan-400 transition-all transform hover:scale-125 hover:-translate-y-1`}>
+              <a href="https://linkedin.com/in/shem-martin" target="_blank" rel="noopener noreferrer" className={`${isDarkMode ? 'text-slate-300' : 'text-gray-600'} hover:text-cyan-400 transition-all transform hover:scale-125 hover:-translate-y-1`}>
                 <Linkedin size={28} />
               </a>
-              <a href="#" className={`${isDarkMode ? 'text-slate-300' : 'text-gray-600'} hover:text-cyan-400 transition-all transform hover:scale-125 hover:-translate-y-1`}>
+              <a href="mailto:shemlecrae1309@gmail.com" className={`${isDarkMode ? 'text-slate-300' : 'text-gray-600'} hover:text-cyan-400 transition-all transform hover:scale-125 hover:-translate-y-1`}>
                 <Mail size={28} />
               </a>
             </div>
@@ -348,7 +374,6 @@ export default function ModernPortfolio() {
             <div className="text-center transform hover:scale-110 transition-transform">
               <div className="relative inline-block mb-3">
                 <Award className="text-cyan-400 animate-bounce" size={32} />
-                <div className="absolute -top-1 -right-1 w-3 h-3 bg-green-400 rounded-full animate-ping"></div>
               </div>
               <div className="text-5xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-500 mb-2">
                 {stats.projects}+
@@ -358,7 +383,6 @@ export default function ModernPortfolio() {
             <div className="text-center transform hover:scale-110 transition-transform">
               <div className="relative inline-block mb-3">
                 <Users className="text-purple-400 animate-bounce" size={32} style={{ animationDelay: '0.2s' }} />
-                <div className="absolute -top-1 -right-1 w-3 h-3 bg-purple-400 rounded-full animate-ping" style={{ animationDelay: '0.2s' }}></div>
               </div>
               <div className="text-5xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-500 mb-2">
                 {stats.clients}+
@@ -368,7 +392,6 @@ export default function ModernPortfolio() {
             <div className="text-center transform hover:scale-110 transition-transform">
               <div className="relative inline-block mb-3">
                 <Code className="text-green-400 animate-bounce" size={32} style={{ animationDelay: '0.4s' }} />
-                <div className="absolute -top-1 -right-1 w-3 h-3 bg-green-400 rounded-full animate-ping" style={{ animationDelay: '0.4s' }}></div>
               </div>
               <div className="text-5xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-green-400 to-cyan-500 mb-2">
                 {stats.hours}+
@@ -382,8 +405,8 @@ export default function ModernPortfolio() {
       {/* About Section */}
       <section id="about" className="py-20 px-4 relative overflow-hidden">
         {/* Background decorations */}
-        <div className="absolute top-10 right-10 text-9xl opacity-5">💻</div>
-        <div className="absolute bottom-10 left-10 text-9xl opacity-5">🚀</div>
+        <div className="absolute top-10 right-10 text-6xl opacity-5">💻</div>
+        <div className="absolute bottom-10 left-10 text-6xl opacity-5">🚀</div>
 
         <div className="max-w-6xl mx-auto relative z-10">
           <h2 className="text-4xl md:text-5xl font-bold mb-12 text-center bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
@@ -392,14 +415,14 @@ export default function ModernPortfolio() {
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div>
               <p className={`text-lg ${isDarkMode ? 'text-slate-300' : 'text-gray-700'} mb-6 leading-relaxed`}>
-                I'm a full-stack developer with a strong IT background, passionate about creating 
-                efficient and user-friendly web applications. My experience in IT gives me a unique 
-                perspective on building robust, scalable solutions.
+                Hi there, I'm Shem Martin 👋 - Founder of <strong className="text-cyan-400">DevLoom Creatives</strong>, 
+                a passionate frontend and full-stack developer from Kenya. I specialize in creating 
+                beautiful, responsive user interfaces and robust backend systems that power modern web applications.
               </p>
               <p className={`text-lg ${isDarkMode ? 'text-slate-300' : 'text-gray-700'} mb-6 leading-relaxed`}>
-                I specialize in React for frontend development and Node.js for backend systems, 
-                with expertise in database design and API architecture. Currently expanding my 
-                skills in modern frameworks and cloud technologies.
+                At DevLoom Creatives, we craft everything from pixel-perfect landing pages to complex web applications. 
+                Our expertise spans React, PHP, Node.js, and MySQL, with a strong focus on user experience and performance. 
+                Currently expanding into Python & Django to deliver even more powerful solutions.
               </p>
               <div className="flex gap-4 flex-wrap">
                 {[
@@ -428,20 +451,20 @@ export default function ModernPortfolio() {
                   <span><strong>Focus:</strong> Full-Stack Web Development</span>
                 </li>
                 <li className="flex items-start gap-3 hover:translate-x-2 transition-transform">
-                  <span className="text-2xl">💼</span>
-                  <span><strong>Background:</strong> IT Professional</span>
-                </li>
-                <li className="flex items-start gap-3 hover:translate-x-2 transition-transform">
-                  <span className="text-2xl">🚀</span>
-                  <span><strong>Currently Learning:</strong> Advanced React patterns</span>
-                </li>
-                <li className="flex items-start gap-3 hover:translate-x-2 transition-transform">
-                  <span className="text-2xl">🛠️</span>
-                  <span><strong>Favorite Stack:</strong> React + Node.js + MongoDB</span>
+                  <span className="text-2xl">🏢</span>
+                  <span><strong>Company:</strong> DevLoom Creatives</span>
                 </li>
                 <li className="flex items-start gap-3 hover:translate-x-2 transition-transform">
                   <span className="text-2xl">📍</span>
-                  <span><strong>Available for:</strong> Freelance & Full-time roles</span>
+                  <span><strong>Location:</strong> Kenya / Available Globally</span>
+                </li>
+                <li className="flex items-start gap-3 hover:translate-x-2 transition-transform">
+                  <span className="text-2xl">🚀</span>
+                  <span><strong>Currently Learning:</strong> Python & Django</span>
+                </li>
+                <li className="flex items-start gap-3 hover:translate-x-2 transition-transform">
+                  <span className="text-2xl">💡</span>
+                  <span><strong>Motto:</strong> "Code today, build tomorrow"</span>
                 </li>
               </ul>
             </div>
@@ -452,17 +475,17 @@ export default function ModernPortfolio() {
       {/* Projects with Color Gradients */}
       <section id="projects" className={`py-20 px-4 ${isDarkMode ? 'bg-slate-800/30' : 'bg-gray-100'} relative overflow-hidden`}>
         {/* Background tech icons */}
-        <div className="absolute top-20 left-10 text-8xl opacity-5 animate-pulse">⚛️</div>
-        <div className="absolute bottom-20 right-10 text-8xl opacity-5 animate-pulse" style={{ animationDelay: '1s' }}>🔧</div>
+        <div className="absolute top-20 left-10 text-5xl opacity-5 animate-pulse">⚛️</div>
+        <div className="absolute bottom-20 right-10 text-5xl opacity-5 animate-pulse" style={{ animationDelay: '1s' }}>🔧</div>
 
         <div className="max-w-6xl mx-auto relative z-10">
           <h2 className="text-4xl md:text-5xl font-bold mb-4 text-center bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
             Featured Projects
           </h2>
           <p className={`${isDarkMode ? 'text-slate-400' : 'text-gray-600'} text-center mb-12 text-lg`}>
-            A selection of projects demonstrating my full-stack capabilities
+            A diverse portfolio showcasing web applications and landing pages
           </p>
-          <div className="grid md:grid-cols-2 gap-8">
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {projects.map((project, index) => (
               <div
                 key={index}
@@ -473,9 +496,14 @@ export default function ModernPortfolio() {
                 
                 <div className="p-6">
                   <div className="flex justify-between items-start mb-4">
-                    <h3 className={`text-2xl font-bold bg-gradient-to-r ${project.gradient} bg-clip-text text-transparent`}>
-                      {project.title}
-                    </h3>
+                    <div>
+                      <h3 className={`text-2xl font-bold bg-gradient-to-r ${project.gradient} bg-clip-text text-transparent mb-1`}>
+                        {project.title}
+                      </h3>
+                      <span className={`text-xs ${isDarkMode ? 'text-slate-400' : 'text-gray-500'}`}>
+                        {project.category}
+                      </span>
+                    </div>
                     <span className={`text-xs bg-gradient-to-r ${project.gradient} bg-clip-text text-transparent px-3 py-1 rounded-full border border-cyan-500/30 font-semibold`}>
                       {project.difficulty}
                     </span>
@@ -580,33 +608,35 @@ export default function ModernPortfolio() {
             Let's Work Together
           </h2>
           <p className={`text-xl ${isDarkMode ? 'text-slate-300' : 'text-gray-700'} mb-8 leading-relaxed`}>
-            I'm currently available for freelance projects and full-time opportunities. 
-            Let's build something amazing!
+            DevLoom Creatives is available for freelance projects and full-time opportunities. 
+            Let's build something amazing together!
           </p>
           <div className="flex gap-6 justify-center mb-8 flex-wrap">
             <a
-              href="mailto:your.email@example.com"
+              href="mailto:shemlecrae1309@gmail.com"
               className="flex items-center gap-2 px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-500 hover:from-cyan-600 hover:to-blue-600 rounded-lg font-semibold transition-all transform hover:scale-105 shadow-lg hover:shadow-cyan-500/50"
             >
               <Mail size={20} />
               Email Me
             </a>
             <a
-              href="#"
+              href="https://github.com/ShemMartin"
+              target="_blank"
+              rel="noopener noreferrer"
               className="flex items-center gap-2 px-8 py-4 border-2 border-cyan-500 hover:bg-cyan-500/10 rounded-lg font-semibold transition-all hover:shadow-lg"
             >
               <Github size={20} />
               GitHub
             </a>
           </div>
-          <p className={`${isDarkMode ? 'text-slate-400' : 'text-gray-600'} text-lg`}>your.email@example.com</p>
+          <p className={`${isDarkMode ? 'text-slate-400' : 'text-gray-600'} text-lg`}>shemlecrae1309@gmail.com</p>
         </div>
       </section>
 
       {/* Footer */}
       <footer className={`py-8 px-4 border-t ${isDarkMode ? 'border-slate-700 bg-slate-800/50' : 'border-gray-200 bg-white'}`}>
         <div className={`max-w-6xl mx-auto text-center ${isDarkMode ? 'text-slate-400' : 'text-gray-600'}`}>
-          <p>© 2024 Your Name. Built with React & Tailwind CSS</p>
+          <p>© 2024 Shem Martin | DevLoom Creatives. Built with React & Tailwind CSS</p>
           <p className="text-sm mt-2">Made with ❤️ and lots of ☕</p>
         </div>
       </footer>
